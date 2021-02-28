@@ -1,0 +1,95 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 2rem;
+  background-color: black;
+  color: white;
+  height: 5.5rem;
+}
+
+.iconsContainer {
+  display: flex;
+}
+
+.iconContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0rem 1rem;
+  outline: none;
+  border: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  &:focus {
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(163, 213, 241, 0.6) 20%,
+      rgba(81, 175, 228, 0) 100%
+    );
+  }
+}
+
+.input {
+  opacity: 0;
+  position: absolute;
+}
+
+.selectedIconContainer {
+  @extend .iconContainer;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(163, 213, 241, 0.6) 20%,
+    rgba(81, 175, 228, 0) 100%
+  );
+}
+
+.iconText {
+  font-size: 12px;
+  user-select: none;
+}
+.shadow {
+  height: 2.5rem;
+  background: linear-gradient(180deg, black 0%, transparent 70%);
+}
+
+.logoContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.kinoIcon {
+  position: absolute;
+  left: 75px;
+  top: 10px;
+}
+
+.kino {
+  color: white;
+  font-size: 40px;
+  font-weight: 900;
+  text-shadow: 0 0 5px white;
+  letter-spacing: 5px;
+}
+
+.show {
+  font-weight: lighter;
+  color: #00b8ff;
+  position: absolute;
+  top: 35px;
+  left: 78px;
+  transform: rotate(345deg);
+  font-family: sans-serif;
+}
+
+.searchWrapper {
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+}
