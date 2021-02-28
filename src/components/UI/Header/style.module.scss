@@ -24,14 +24,6 @@
   appearance: none;
   background: transparent;
   cursor: pointer;
-  &:focus {
-    background: radial-gradient(
-      circle,
-      rgba(255, 255, 255, 0.6) 0%,
-      rgba(163, 213, 241, 0.6) 20%,
-      rgba(81, 175, 228, 0) 100%
-    );
-  }
 }
 
 .input {
