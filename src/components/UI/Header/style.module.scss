@@ -1,3 +1,8 @@
+.headerWrapper {
+  position: fixed;
+  width: 100%;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -81,7 +86,23 @@
 }
 
 .searchWrapper {
+  flex-basis: 200px;
   color: rgba(255, 255, 255, 0.5);
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+}
+
+.searchShow {
+  width: 150px;
+  transition: width 1s;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.searchHidden {
+  width: 0px;
+  overflow: hidden;
+  transition: width 2s;
+  transition-delay: 1s;
 }
