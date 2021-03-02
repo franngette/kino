@@ -713,3 +713,14 @@ export const shows = {
   total_pages: 1000,
   total_results: 20000,
 };
+
+export const getData = (e) => {
+  switch (e) {
+    case "films":
+      return films;
+    case "shows":
+      return shows;
+    default:
+      break;
+  }
+};

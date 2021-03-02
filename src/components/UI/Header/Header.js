@@ -3,14 +3,16 @@ import styles from "./style.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTv, faFilm, faSearch, faPlayCircle } from "@fortawesome/free-solid-svg-icons";
 import InputText from "../InputText/InputText";
+import { getData } from "../../../services/dummyData";
 
-const Header = () => {
+const Header = ({ getSelected, inputHandler }) => {
   const [selectedOption, setSeletedOption] = useState("shows");
   const [searchHover, setSearchHover] = useState(false);
   const [isInFocus, setIsInFocus] = useState(false);
 
-  const chooseType = (e) => {
-    setSeletedOption(e);
+  const chooseType = () => {
+    const res = getData(selectedOption);
+    getSelected(res.results);
   };
 
   let searchClass = styles.searchHidden;
@@ -29,9 +31,17 @@ const Header = () => {
     setSearchHover(false);
   };
 
+  const onChangeInput = (value) => {
+    if (value === "") {
+      chooseType();
+    } else {
+      inputHandler(value);
+    }
+  };
+
   useEffect(() => {
-    console.log(selectedOption);
-  });
+    chooseType();
+  }, [selectedOption]);
 
   return (
     <>
@@ -46,7 +56,7 @@ const Header = () => {
                 name="radio-group"
                 value="shows"
                 onChange={(e) => {
-                  chooseType(e.target.value);
+                  setSeletedOption(e.target.value);
                 }}
               />
               <label
@@ -65,7 +75,7 @@ const Header = () => {
                 name="radio-group"
                 value="films"
                 onClick={(e) => {
-                  chooseType(e.target.value);
+                  setSeletedOption(e.target.value);
                 }}
               />
               <label
@@ -89,7 +99,7 @@ const Header = () => {
           >
             <FontAwesomeIcon size="1x" icon={faSearch} color="white" />
             <div className={searchClass} onFocus={() => setIsInFocus(true)} onBlur={() => clooseInput()}>
-              <InputText placeholder="Search..." />
+              <InputText placeholder="Search..." onChange={(e) => onChangeInput(e.target.value)} />
             </div>
           </div>
         </div>

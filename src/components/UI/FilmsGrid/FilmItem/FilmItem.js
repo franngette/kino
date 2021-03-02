@@ -1,29 +1,41 @@
 import React, { useState } from "react";
+import StarsRating from "../../StarsRating/StarsRating";
 import styles from "./style.module.scss";
 const FilmItem = ({ data }) => {
   const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div
-      onMouseEnter={() => {
-        setIsHovered(true);
-      }}
-      onMouseLeave={() => {
-        setIsHovered(false);
-      }}
-      className={styles.filmWrapper}
-      style={{
-        background: `url(https://image.tmdb.org/t/p/original/${data.poster_path}) center`,
-        backgroundSize: "cover",
-      }}
-    >
-      {isHovered && (
-        <>
-          <h1 className={styles.title}>{data.title}</h1>
-          <p className={styles.description}>{data.vote_average}</p>
-          <p className={styles.description}>{data.release_date}</p>
-        </>
+    <>
+      {(data?.title || data?.name) && (
+        <div
+          onMouseEnter={() => {
+            setIsHovered(true);
+          }}
+          onMouseLeave={() => {
+            setIsHovered(false);
+          }}
+          className={styles.filmWrapper}
+          style={{
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundImage: `url(https://image.tmdb.org/t/p/original/${data.poster_path})`,
+          }}
+        >
+          {isHovered && (
+            <>
+              <div className={styles.opacityLayer}></div>
+              <div className={styles.filmDescription}>
+                <div>
+                  <h1 className={styles.title}>{data?.title ?? data?.name}</h1>
+                  <p className={styles.description}>{(data?.release_date ?? data?.first_air_date).slice(0, 4)}</p>
+                </div>
+                <StarsRating rating={data.vote_average} />
+              </div>
+            </>
+          )}
+        </div>
       )}
-    </div>
+    </>
   );
 };
 
