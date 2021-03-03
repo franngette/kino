@@ -1,6 +1,57 @@
 .footer {
-  background-color: var(--blue);
+  background-color: var(--dark);
   margin-top: 1rem;
   color: white;
   height: 5rem;
+  padding: 3rem;
+}
+.pageInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.contentWrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.logoContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.kinoIcon {
+  position: absolute;
+  left: 75px;
+  top: 10px;
+}
+
+.kino {
+  color: white;
+  font-size: 40px;
+  font-weight: 900;
+  text-shadow: 0 0 5px white;
+  letter-spacing: 5px;
+}
+
+.show {
+  font-weight: lighter;
+  color: #00b8ff;
+  position: absolute;
+  top: 35px;
+  left: 78px;
+  transform: rotate(345deg);
+  font-family: sans-serif;
+}
+
+.contactWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.name {
+  margin-top: 1rem;
 }
