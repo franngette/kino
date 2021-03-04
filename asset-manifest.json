@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/kino/static/css/main.09c4214c.chunk.css",
+    "main.js": "/kino/static/js/main.9b8e9904.chunk.js",
+    "main.js.map": "/kino/static/js/main.9b8e9904.chunk.js.map",
+    "runtime-main.js": "/kino/static/js/runtime-main.6d43febf.js",
+    "runtime-main.js.map": "/kino/static/js/runtime-main.6d43febf.js.map",
+    "static/js/2.a6a22194.chunk.js": "/kino/static/js/2.a6a22194.chunk.js",
+    "static/js/2.a6a22194.chunk.js.map": "/kino/static/js/2.a6a22194.chunk.js.map",
+    "static/js/3.430cc63c.chunk.js": "/kino/static/js/3.430cc63c.chunk.js",
+    "static/js/3.430cc63c.chunk.js.map": "/kino/static/js/3.430cc63c.chunk.js.map",
+    "index.html": "/kino/index.html",
+    "static/css/main.09c4214c.chunk.css.map": "/kino/static/css/main.09c4214c.chunk.css.map",
+    "static/js/2.a6a22194.chunk.js.LICENSE.txt": "/kino/static/js/2.a6a22194.chunk.js.LICENSE.txt",
+    "static/media/style.module.scss": "/kino/static/media/tmdb.bb8aa703.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6d43febf.js",
+    "static/js/2.a6a22194.chunk.js",
+    "static/css/main.09c4214c.chunk.css",
+    "static/js/main.9b8e9904.chunk.js"
+  ]
+}
