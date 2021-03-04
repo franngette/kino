@@ -51,10 +51,6 @@
   font-size: 12px;
   user-select: none;
 }
-.shadow {
-  height: 2.5rem;
-  background: linear-gradient(180deg, black 0%, transparent 70%);
-}
 
 .logoContainer {
   position: relative;
@@ -64,8 +60,8 @@
 
 .kinoIcon {
   position: absolute;
-  left: 75px;
-  top: 10px;
+  left: 69px;
+  top: 7px;
 }
 
 .kino {
@@ -80,8 +76,8 @@
   font-weight: lighter;
   color: #00b8ff;
   position: absolute;
-  top: 35px;
-  left: 78px;
+  top: 32px;
+  left: 75px;
   transform: rotate(345deg);
   font-family: sans-serif;
 }
@@ -106,4 +102,9 @@
   overflow: hidden;
   transition: width 2s;
   transition-delay: 1s;
+}
+
+.shadow {
+  height: 2.5rem;
+  background: linear-gradient(180deg, black 0%, transparent 70%);
 }

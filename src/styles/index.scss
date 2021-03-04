@@ -1,17 +1,19 @@
 @import "./resets.scss";
+@import "./mixins.scss";
 
 :root {
-  --dark: #0c0c0c;
+  --dark: #242424;
   --medium: #393e46;
   --light: #eeeeee;
   --blue: #0e49b5;
   background-color: black;
+  font-family: "Roboto, Roboto Bold";
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Roboto", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

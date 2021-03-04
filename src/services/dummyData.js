@@ -1,4 +1,4 @@
-export const films = {
+export const movie = {
   page: 1,
   results: [
     {
@@ -366,7 +366,7 @@ export const films = {
   total_results: 20000,
 };
 
-export const shows = {
+export const tv = {
   page: 1,
   results: [
     {
@@ -716,10 +716,10 @@ export const shows = {
 
 export const getData = (e) => {
   switch (e) {
-    case "films":
-      return films;
-    case "shows":
-      return shows;
+    case "movie":
+      return movie;
+    case "tv":
+      return tv;
     default:
       break;
   }

@@ -2,8 +2,9 @@
   background-color: var(--dark);
   margin-top: 1rem;
   color: white;
-  height: 5rem;
-  padding: 3rem;
+  height: 150px;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(0deg, var(--dark) 0%, transparent 80%);
 }
 .pageInfo {
   display: flex;
@@ -23,8 +24,8 @@
 
 .kinoIcon {
   position: absolute;
-  left: 75px;
-  top: 10px;
+  left: 69px;
+  top: 7px;
 }
 
 .kino {
@@ -39,8 +40,8 @@
   font-weight: lighter;
   color: #00b8ff;
   position: absolute;
-  top: 35px;
-  left: 78px;
+  top: 32px;
+  left: 75px;
   transform: rotate(345deg);
   font-family: sans-serif;
 }
@@ -53,5 +54,44 @@
 }
 
 .name {
+  color: gray;
   margin-top: 1rem;
+}
+
+.tecnologies {
+  display: flex;
+  align-items: center;
+}
+
+.tmdb {
+  background: url("../../../assets/tmdb.svg");
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 5em;
+  height: 2em;
+  margin-right: 1rem;
+}
+
+.react {
+  &:hover {
+    color: #65e0dc;
+  }
+}
+.mail {
+  &:hover {
+    color: #00abe9;
+  }
+}
+.linkedin {
+  margin-right: 1rem;
+  &:hover {
+    color: #0a66c2;
+  }
+}
+.github {
+  margin-right: 1rem;
+  &:hover {
+    color: #ffa500;
+  }
 }

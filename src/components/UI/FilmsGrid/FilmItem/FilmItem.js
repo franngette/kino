@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import StarsRating from "../../StarsRating/StarsRating";
 import styles from "./style.module.scss";
+import PropTypes from "prop-types";
+
+import StarsRating from "../../StarsRating/StarsRating";
+
 const FilmItem = ({ data }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -37,6 +40,10 @@ const FilmItem = ({ data }) => {
       )}
     </>
   );
+};
+
+FilmItem.propTypes = {
+  data: PropTypes.object.isRequired,
 };
 
 export default FilmItem;

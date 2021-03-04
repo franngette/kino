@@ -1,21 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+
 import FilmsGrid from "./components/UI/FilmsGrid/FilmsGrid";
 import Footer from "./components/UI/Footer/Footer";
 import Header from "./components/UI/Header/Header";
-function App() {
+/* import {getSearch} from './services/axios' */
+
+const App = () => {
   const [dataFromChild, setDataFromChild] = useState([]);
 
+  /*getDataFromChild uses de data from the child to store the films/shows */
   const getDataFromChild = (data) => {
     setDataFromChild(data);
   };
 
+  /*inputHandler will filter the dummyData with the input*/
   const inputHandler = (val) => {
     if (val === "") {
-      console.log("vacio");
       getDataFromChild();
+      /* if val is empty will fire the child component to look for trendings */
     }
+
+    /* You can use getSearch(val) from "./services/axios" to find the title. */
     const filtered = dataFromChild.filter((el) => (el.name || el.title).includes(val));
-    console.log(filtered);
     if (filtered) {
       setDataFromChild(filtered);
     }
@@ -30,6 +36,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
