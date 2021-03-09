@@ -55,7 +55,7 @@ const FilmsGrid = ({ data }) => {
             </div>
             <div className={styles.imgWrapper}>
               <img
-                src={`https://image.tmdb.org/t/p/original/${modalData.poster_path}`}
+                src={`https://image.tmdb.org/t/p/w780/${modalData.poster_path}`}
                 className={styles.img}
                 alt={modalData.name || modalData.title}
               />

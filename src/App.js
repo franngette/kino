@@ -30,9 +30,9 @@ const App = () => {
   return (
     <div className="wrapper">
       <Header getSelected={getDataFromChild} inputHandler={inputHandler} />
-      <div className="children">
+      <section className="children">
         <FilmsGrid data={dataFromChild} />
-      </div>
+      </section>
       <Footer />
     </div>
   );

@@ -13,9 +13,9 @@ const Footer = () => {
           <div className={styles.logoContainer}>
             <h1 className={styles.kino}>kin</h1>
             <FontAwesomeIcon className={styles.kinoIcon} size="2x" icon={faPlayCircle} />
-            <h3 className={styles.show}>show</h3>
+            <p className={styles.show}>show</p>
           </div>
-          <h3 style={{ marginTop: "1rem", color: "gray" }}>Whatch them all.</h3>
+          <p style={{ marginTop: "1rem", color: "gray" }}>Whatch them all.</p>
         </div>
         <div className={styles.tecnologies}>
           <a
@@ -35,12 +35,15 @@ const Footer = () => {
       <div className={styles.contactWrapper}>
         <div className={styles.contact}>
           <a href="https://www.linkedin.com/in/francis-alberto-gette-2822a8120/" target="_blank" rel="noreferrer">
+            {" "}
             <FontAwesomeIcon size="2x" icon={faLinkedin} color="white" className={styles.linkedin} />{" "}
           </a>
           <a href="https://github.com/franngette" target="_blank" rel="noreferrer">
+            {" "}
             <FontAwesomeIcon size="2x" icon={faGithub} color="white" className={styles.github} />
           </a>
           <a href="mailto: franngette@gmail.com">
+            {" "}
             <FontAwesomeIcon size="2x" icon={faEnvelope} color="white" className={styles.mail} />
           </a>
         </div>

@@ -44,6 +44,49 @@ const Header = ({ getSelected, inputHandler }) => {
     }
   };
 
+  const renderIcons = () => {
+    return (
+      <>
+        <label
+          style={{ minWidth: "50px" }}
+          htmlFor="radio-1"
+          className={selectedOption === "tv" ? styles.selectedIconContainer : styles.iconContainer}
+        >
+          <input
+            id="radio-1"
+            className={styles.input}
+            type="radio"
+            name="radio-group"
+            value="tv"
+            onChange={(e) => {
+              setSeletedOption(e.target.value);
+            }}
+          />
+          <FontAwesomeIcon size="2x" icon={faTv} />
+          <p className={styles.iconText}>TV shows</p>
+        </label>
+        <label
+          style={{ minWidth: "50px" }}
+          htmlFor="radio-2"
+          className={selectedOption === "movie" ? styles.selectedIconContainer : styles.iconContainer}
+        >
+          <input
+            id="radio-2"
+            className={styles.input}
+            type="radio"
+            name="radio-group"
+            value="movie"
+            onClick={(e) => {
+              setSeletedOption(e.target.value);
+            }}
+          />
+          <FontAwesomeIcon size="2x" icon={faFilm} />
+          <p className={styles.iconText}>Films</p>
+        </label>
+      </>
+    );
+  };
+
   useEffect(() => {
     chooseType();
   }, [selectedOption]);
@@ -52,50 +95,11 @@ const Header = ({ getSelected, inputHandler }) => {
     <>
       <header className={styles.headerWrapper}>
         <div className={styles.header}>
-          <div className={styles.iconsContainer}>
-            <div>
-              <input
-                id="radio-1"
-                className={styles.input}
-                type="radio"
-                name="radio-group"
-                value="tv"
-                onChange={(e) => {
-                  setSeletedOption(e.target.value);
-                }}
-              />
-              <label
-                htmlFor="radio-1"
-                className={selectedOption === "tv" ? styles.selectedIconContainer : styles.iconContainer}
-              >
-                <FontAwesomeIcon size="2x" icon={faTv} />
-                <p className={styles.iconText}>TV shows</p>
-              </label>
-            </div>
-            <div>
-              <input
-                id="radio-2"
-                className={styles.input}
-                type="radio"
-                name="radio-group"
-                value="movie"
-                onClick={(e) => {
-                  setSeletedOption(e.target.value);
-                }}
-              />
-              <label
-                htmlFor="radio-2"
-                className={selectedOption === "movie" ? styles.selectedIconContainer : styles.iconContainer}
-              >
-                <FontAwesomeIcon size="2x" icon={faFilm} />
-                <p className={styles.iconText}>Films</p>
-              </label>
-            </div>
-          </div>
+          <div className={styles.iconsContainer}>{renderIcons()}</div>
           <div className={styles.logoContainer}>
             <h1 className={styles.kino}>kin</h1>
             <FontAwesomeIcon className={styles.kinoIcon} size="2x" icon={faPlayCircle} />
-            <h3 className={styles.show}>show</h3>
+            <p className={styles.show}>show</p>
           </div>
           <div
             className={styles.searchWrapper}

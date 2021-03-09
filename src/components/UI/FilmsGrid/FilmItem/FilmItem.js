@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styles from "./style.module.scss";
 import PropTypes from "prop-types";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import StarsRating from "../../StarsRating/StarsRating";
 
 const FilmItem = ({ data, onClick }) => {
@@ -11,20 +12,21 @@ const FilmItem = ({ data, onClick }) => {
     <>
       {(data?.title || data?.name) && (
         <div
+          className={styles.filmWrapper}
           onMouseEnter={() => {
             setIsHovered(true);
           }}
           onMouseLeave={() => {
             setIsHovered(false);
           }}
-          className={styles.filmWrapper}
-          style={{
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundImage: `url(https://image.tmdb.org/t/p/original/${data.poster_path})`,
-          }}
           onClick={() => onClick(data)}
         >
+          <LazyLoadImage
+            effect="blur"
+            style={{ width: "100%" }}
+            src={`https://image.tmdb.org/t/p/w400/${data.poster_path}`}
+            alt={data?.title || data?.name}
+          />
           {isHovered && (
             <>
               <div className={styles.opacityLayer}></div>
